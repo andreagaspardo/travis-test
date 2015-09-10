@@ -7,7 +7,7 @@ test:
   username: travis
   encoding: utf8
 before_script:
-  - # php composer.phar self-update
-  - # php composer.phar update
+  - php composer.phar self-update
+  - php composer.phar update
   - mysql -e 'create database myapp_test;'
 script: phpunit --bootstrap src/autoload.php tests
