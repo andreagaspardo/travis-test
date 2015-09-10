@@ -20,6 +20,13 @@ class TestTest extends PHPUnit_Framework_TestCase
         $this->object->runMe();
     }
 
+    public function testMysqli()
+    {
+        $mysqli = new mysqli('127.0.0.1', 'travis', '', 'myapp_test');
+        $this->assertEmpty($mysqli->connect_error);
+        $this->object->runMe();
+    }
+
     /**
      *
      */
