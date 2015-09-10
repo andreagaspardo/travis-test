@@ -3,4 +3,8 @@ php:
   - 5.5
   - 5.4
   - hhvm
+before_script: php composer.phar self-update
+before_script
+  - php composer.phar self-update
+  - php composer.phar update
 script: phpunit --bootstrap src/autoload.php tests
