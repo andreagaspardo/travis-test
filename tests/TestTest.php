@@ -22,7 +22,7 @@ class TestTest extends PHPUnit_Framework_TestCase
 
     public function testMysqli()
     {
-        $mysqli = new mysqli('127.0.0.1', 'travis', '', 'myapp_test');
+        $mysqli = new mysqli('127.0.0.1', 'travis', '', 'test');
         $this->assertEmpty($mysqli->connect_error);
         $this->object->runMe();
     }
